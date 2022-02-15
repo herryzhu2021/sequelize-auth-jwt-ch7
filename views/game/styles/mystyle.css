@@ -1,0 +1,442 @@
+/**template**/
+:root {
+  --color-accent: gold;
+  --color-content: rgb(168, 143, 0);
+  --color-hover: rgb(163, 144, 34);
+  --color-focus: rgb(107, 91, 1);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/**Components**/
+
+/*Button*/
+.btn {
+  padding: 0.2rem 3rem;
+  margin: 1rem 0;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.btn--accent {
+  background-color: var(--color-accent);
+  color: var(--color-content);
+}
+.btn--accent:hover {
+  background-color: var(--color-hover);
+}
+.btn--accent:focus {
+  background-color: var(--color-focus);
+}
+
+.navbar-toggler {
+  background-color: var(--color-accent);
+}
+/**Layout**/
+
+/**Background images**/
+.main-container {
+  display: block;
+}
+
+.bg {
+  height: 992px;
+  /* height: 100%; */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg1 {
+  /* The background image used */
+  background-image: url('../assets/main-bg.jpg');
+}
+
+.bg2 {
+  /* The background image used */
+  background-image: url('../assets/the-games-bg.jpg');
+}
+
+.bg3 {
+  /* The background image used */
+  background-image: url('../assets/features.jpg');
+}
+
+.bg4 {
+  /* The background image used */
+  background-image: url('../assets/requirements.png');
+}
+
+.bg5 {
+  /* The background image used */
+  background-image: url('../assets/top-score-bg.png');
+}
+
+/**main page**/
+
+/* .nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar a {
+  text-decoration: none;
+  padding: 0 2rem;
+  color: white;
+}
+
+.nav-bar__logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-bar__middle-link {
+  display: flex;
+  list-style: none;
+}
+
+.nav-bar__auth {
+  display: flex;
+  align-self: flex-end;
+  list-style: none;
+} */
+
+.play-container {
+  display: flex;
+  width: 100%;
+  height: 120vh;
+  justify-content: center;
+  align-items: center;
+}
+.play-content {
+  text-align: center;
+}
+
+.story-container {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+  align-items: flex-end;
+}
+.story-content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 7rem;
+  color: white;
+  padding: 1rem 0;
+}
+
+.play-content > h1 {
+  font-weight: bold;
+}
+
+p {
+  color: white;
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+/*The Games page*/
+
+.games-container-outer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+
+.games-container-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .games-container-inner {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+    align-items: flex-start;
+  }
+}
+
+.games-slides {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 50vw;
+  height: 50vh;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/**Features Page **/
+.container-features-outer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.container-features-inner {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.card {
+  opacity: 0.7;
+}
+
+/**System requirement page **/
+.container-sys-outer > p {
+  text-align: center;
+  padding-top: 10vh;
+}
+
+.container-sys-inner {
+  display: grid;
+  padding-left: 3vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.container-sys {
+  display: grid;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+}
+
+td {
+  color: white;
+}
+
+.specs-category {
+  color: var(--color-accent);
+}
+
+/**Top Scores Page**/
+.container-score {
+  display: grid;
+  padding-left: 3vw;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  background-color: black;
+}
+
+.topscores {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  max-width: 70%;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 100%;
+}
+
+.card1 {
+  width: 400px;
+  height: 250px;
+  background-color: grey;
+  margin: 3vh;
+  align-self: flex-end;
+  border-radius: 10px;
+}
+.card2 {
+  width: 400px;
+  height: 250px;
+  background-color: darkgray;
+  margin: 3vh;
+  border-radius: 10px;
+}
+
+.card3 {
+  width: 400px;
+  height: 250px;
+  background-color: grey;
+  align-self: center;
+  margin: 3vh;
+  border-radius: 10px;
+}
+.particulars {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.particulars-inner {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+}
+
+h3 {
+  color: var(--color-accent);
+}
+
+h5 {
+  color: white;
+}
+
+.sosmed {
+  align-self: center;
+  margin: 10px;
+}
+
+.comments {
+  margin: 0 10px 30px 10px;
+  padding: 0;
+}
+.date {
+  font-size: 9px;
+}
+
+@media (max-width: 768px) {
+  .container-score {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3vw;
+    align-items: center;
+    background-color: black;
+  }
+}
+
+/**Traditional Game **/
+.container-suit {
+  background-color: #9c835f;
+  height: 100vh;
+}
+
+.container-heading {
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.btnBack {
+  width: 3em;
+  height: 3em;
+  margin-right: 1em;
+}
+
+.logo-suit {
+  width: 3em;
+  height: 3em;
+  border-radius: 20%;
+  margin-right: 1em;
+}
+
+.title-suit {
+  font-size: 2rem;
+  color: var(--color-accent);
+}
+
+.table-suit {
+  margin: 0 auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+.players {
+  font-size: large;
+  padding-bottom: 5vh;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+.img-suit {
+  width: 9em;
+  height: 9em;
+  border-radius: 10%;
+}
+
+.img-suit-selected {
+  width: 9em;
+  height: 9em;
+  background-color: khaki;
+}
+
+.refresh {
+  width: 5em;
+  height: 5em;
+  margin: 0 auto;
+}
+
+.refresh-img {
+  width: 5em;
+  height: 5em;
+}
+
+.result-box {
+  width: 20em;
+  height: 15em;
+  text-align: center;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.state-awal {
+  font-size: 6em;
+}
+
+.result {
+  width: 20em;
+  height: 60%;
+  font-size: 2em;
+  transform: rotate(-45deg);
+  color: white;
+  background-color: green;
+  padding: 3rem;
+}

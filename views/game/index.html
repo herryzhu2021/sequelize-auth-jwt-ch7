@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/mystyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Challenge Ch5</title>
+  </head>
+
+  <body>
+    <div class="container-suit">
+      <div class="container-heading">
+        <img
+          class="btnBack"
+          src="assets/traditionalGame/back.png"
+          onclick="backToMain()"
+        />
+        <img class="logo-suit" src="assets/traditionalGame/logo.png" />
+        <h1 class="title-suit">ROCK PAPER SCISSORS</h1>
+      </div>
+      <div class="container-table-suit">
+        <h3>You have 3 attempts to play!!</h3>
+        <table class="table-suit">
+          <tr>
+            <td>
+              <div class="players">
+                PLAYER 1
+              </div>
+            </td>
+            <td></td>
+            <td>
+              <div class="players">
+                COM
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="img-suit"
+                data-val="batu"
+                src="assets/traditionalGame/batu.png"
+                onclick="checkResult(this)"
+              />
+            </td>
+            <td></td>
+            <td>
+              <img
+                class="img-suit"
+                src="assets/traditionalGame/batu.png"
+                id="comp-batu"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="img-suit"
+                data-val="kertas"
+                src="assets/traditionalGame/kertas.png"
+                onclick="checkResult(this)"
+              />
+            </td>
+            <td>
+              <div class="result-box">
+                <div class="state-awal" id="hasil">VS</div>
+              </div>
+            </td>
+            <td>
+              <img
+                class="img-suit"
+                src="assets/traditionalGame/kertas.png"
+                id="comp-kertas"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                class="img-suit"
+                data-val="gunting"
+                src="assets/traditionalGame/gunting.png"
+                onclick="checkResult(this)"
+              />
+            </td>
+            <td></td>
+            <td>
+              <img
+                class="img-suit"
+                src="assets/traditionalGame/gunting.png"
+                id="comp-gunting"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>
+              <div class="refresh">
+                <img
+                  src="assets/traditionalGame/refresh.png"
+                  class="refresh-img"
+                  onclick="resetResult()"
+                />
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script src="scripts/myscript.js"></script>
+  </body>
+</html>

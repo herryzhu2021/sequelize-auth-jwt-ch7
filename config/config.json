@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "krisnafirdaus",
-    "password": "Gardafc16.",
-    "database": "admin",
+    "username": "your-postgres-username",
+    "password": "your-postgres-password",
+    "database": "game_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },

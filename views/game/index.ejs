@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("../partials/head") %>
+<body>
+    <%- include("../partials/navbar") %>
+    <div class="container m-4">
+      <h1>Dashboard Game History for <%= username %></h1>
+      <div>
+          <form method="GET" action="/createRoom">
+              <button type="submit">Create Room</button>
+          </form>
+      </div>
+
+      <div>
+          <table border=1>
+              <tr>
+                  <td>S/N</td>
+                  <td>Time</td>
+                  <td>Room Name</td>
+                  <td>Score</td>
+              </tr>
+              <% z.forEach( (i, index)=> { %>
+                  <tr>
+                      <td>
+                          <%= (index+1) %>
+                      </td>
+                      <td>
+                          <%= i.updatedAt %>
+                      </td>
+                      <td>
+                          <%= i.room.room_name %>
+                      </td>
+                      <td>
+                          <%= i.score %>
+                      </td>
+                  </tr>
+                  <% }) %>
+          </table>
+      </div>        
+
+    </div>
+ 
+</body>
+</html>
+
+
+

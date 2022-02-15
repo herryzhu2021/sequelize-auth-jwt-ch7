@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <%- include("partials/head") %>
   <body>
-    <form method="POST" action="/register">
-      <label for="username">Username</label>
-      <br />
-      <input type="text" name="username" placeholder="Insert your username" />
-      <br />
-
-      <label for="password">Password</label>
-      <br />
-      <input type="password" name="password" placeholder="Insert password" />
-      <br />
-
-      <button type="submit">register</button>
-    </form>
+    <%- include("partials/navbar") %>
+    <div class="container m-4">
+      <% if(messages.error) {%>
+        <p style="color:red"><%= messages.error %></p>
+        <% } %>
+        <br>
+      <h1>Registration</h1>
+      <br>
+      <form method="POST" action="/api/v1/auth/register">
+        <label for="username">Username</label>
+        <br />
+        <input type="text" name="username" placeholder="Insert your username" />
+        <br />
+  
+        <label for="password">Password</label>
+        <br />
+        <input type="password" name="password" placeholder="Insert password" />
+        <br />
+  
+        <button type="submit">register</button>
+      </form>
+    </div>
   </body>
 </html>

@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
+    <%- include("partials/head") %>
   <body>
-    <% if(messages.error) {%>
-    <h5><%= messages.error %></h5>
-    <% } %>
-
-    <form method="POST" action="/login">
-      <label for="username">Username</label>
-      <br />
-      <input type="text" name="username" placeholder="Insert your username" />
-      <br />
-
-      <label for="password">Password</label>
-      <br />
-      <input type="password" name="password" placeholder="Insert password" />
-      <br />
-
-      <button type="submit">Login</button>
-    </form>
+    <%- include("partials/navbar") %>
+    <div class="container m-4">
+      <% if(messages.error) {%>
+        <p style="color:red"><%= messages.error %></p>
+        <% } %>
+        <br>
+      <h1>Input your Credential</h1>
+      <br>
+      <form method="POST" action="/api/v1/auth/login">
+        <label for="username">Username</label>
+        <br />
+        <input type="text" name="username" placeholder="Insert your username" />
+        <br />
+  
+        <label for="password">Password</label>
+        <br />
+        <input type="password" name="password" placeholder="Insert password" />
+        <br />
+  
+        <button type="submit">Login</button>
+        <p>Please <a href="/register">register</a> first for new user!</p>
+      </form>
+    </div>
   </body>
 </html>
